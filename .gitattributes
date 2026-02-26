@@ -1,0 +1,2 @@
+client[[:space:]]eye/dist/linux-unpacked/eye-rest filter=lfs diff=lfs merge=lfs -text
+client[[:space:]]eye/dist/*.deb filter=lfs diff=lfs merge=lfs -text

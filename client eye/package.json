@@ -1,0 +1,57 @@
+{
+    "name": "eye-rest",
+    "version": "1.0.0",
+    "description": "Eye rest reminder application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron . --no-sandbox",
+        "dist": "electron-builder",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "electron",
+        "eye-rest",
+        "health"
+    ],
+    "author": {
+        "name": "Ruby",
+        "email": "ruby@example.com"
+    },
+    "homepage": "https://github.com/ruby/eyerest",
+    "license": "ISC",
+    "build": {
+        "appId": "com.ruby.eyerest",
+        "productName": "Eye-Rest",
+        "directories": {
+            "buildResources": "build",
+            "output": "dist"
+        },
+        "files": [
+            "**/*",
+            "!node_modules/.cache/**",
+            "!dist/**",
+            "!build/**",
+            "!*.md",
+            "!test-*.js"
+        ],
+        "win": {
+            "target": "nsis",
+            "icon": "build/icon.ico"
+        },
+        "linux": {
+            "target": "deb",
+            "icon": "build/icons",
+            "category": "Utility"
+        }
+    },
+    "devDependencies": {
+        "electron": "^40.4.0",
+        "electron-builder": "^26.7.0",
+        "png-to-ico": "^3.0.1",
+        "sharp": "^0.34.5"
+    },
+    "dependencies": {
+        "@mediapipe/face_mesh": "^0.4.1633559619",
+        "axios": "^1.13.5"
+    }
+}
